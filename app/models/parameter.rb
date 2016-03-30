@@ -7,7 +7,6 @@
 #  value      :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  row_order  :integer
 #
 # Indexes
 #
