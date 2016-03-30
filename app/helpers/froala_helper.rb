@@ -1,0 +1,2 @@
+module FroalaHelper
+end

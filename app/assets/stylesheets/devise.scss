@@ -1,0 +1,258 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require font-awesome
+ *= require_self
+ */
+
+@import 'colors';
+
+.devise {
+  font-family: 'Raleway', sans-serif;
+  height: 100vh;
+  .container-fluid-admin {
+    height: 100vh;
+  }
+
+  .container-fluid-devise {
+    height: 100vh;
+    overflow: auto;
+  }
+}
+
+.bckg-dark {
+  background: linear-gradient(-20deg, #09b7b9 30%, #1c51a4 100%);
+}
+
+.bckg-login {
+}
+
+.logo {
+  display: inline-block;
+  margin: 0 auto;
+  width: 130px;
+}
+
+.app-logo {
+  margin: 50px 0 25px;
+  width: 70%;
+}
+
+.bckg-dark-light {
+  background: $secondary;
+}
+
+.bckg-blue {
+  background: $blue;
+}
+
+.centered {
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-form-user {
+  width: 25%;
+  color: #fff;
+  margin: 0 auto;
+  margin-bottom: 25px;
+
+  .content-width {
+    width: 90%;
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+
+  .lost_id {
+    color: #fff;
+    margin-bottom: 15px;
+    display: block;
+    font-size: .9em;
+    width: 90%;
+  }
+
+  .form-actions {
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 10px;
+    .col-sm-6 {
+      padding: 0;
+    }
+    input {
+      float: left;
+      .label {
+        float: left;
+      }
+    }
+    input[type="checkbox"] {
+      margin-top: 0;
+    }
+    .input-group {
+      float: left;
+    }
+    .checkbox {
+      margin: 0;
+      margin-top: 10px;
+      float: left;
+      label {
+        font-size: .8em;
+      }
+    }
+  }
+  form {
+    margin-top: 30px;
+  }
+  .input-group {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+  input {
+    border: 0;
+  }
+  input[type="submit"] {
+    background: $grey;
+    border: 0;
+    border-radius: 0;
+    cursor: pointer;
+    float: right;
+    color: white;
+  }
+  h2 {
+    background: $grey;
+    display: block;
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 1.3em;
+  }
+}
+
+.login-form {
+  color: #fff;
+  width: 30%;
+
+  .links-form {
+    a {
+      color: $light;
+      text-decoration: none;
+      &:hover {
+        color: $light;
+      }
+    }
+  }
+
+  i {
+    font-size: 1.5em;
+  }
+
+  .form-control {
+    box-shadow: none;
+  }
+
+  .input-group {
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin-top: 15px;
+    margin-bottom: 50px;
+  }
+
+  .content {
+    padding: 35px;
+  }
+
+  .content-login {
+    padding: inherit;
+  }
+
+  .input-group-addon {
+    border-radius: 0;
+    padding-bottom: 15px;
+  }
+
+  input[type="submit"] {
+    cursor: pointer;
+    background: $ternary;
+    color: #fff;
+    border-radius: 3px;
+    border: 0;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 45px;
+    margin-top: 55px;
+    &:hover {
+      background: darken($ternary, 5%);
+    }
+  }
+
+  input[type="text"], input[type="email"], input[type="password"] {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid $light;
+    color: #fff;
+    margin-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .input-group-addon {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid $light;
+    color: #fff;
+    margin-top: 15px;
+    padding-bottom: 15px;
+    padding-top: 12px;
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .login-form-user {
+    width: 45%;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .login-form-user {
+    width: 45%;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .login-form-user {
+    width: 26%;
+    input[type="submit"] {
+      width: 100%;
+    }
+  }
+  .app-logo {
+    margin: 50px 0 25px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .login-form-user {
+    width: 15%;
+    input[type="submit"] {
+      width: 100%;
+    }
+  }
+  .app-logo {
+    margin: 50px 0 25px;
+  }
+}
