@@ -23,18 +23,17 @@ RailsAdmin.config do |config|
     index # mandatory
     new
 
-    sortable
-
     export
     bulk_delete
     show
     edit
     delete
 
-
     ## With an audit adapter, you can add:
     #history_index
     #history_show
+
+    nestable
   end
 
   config.main_app_name = ['APP-TITLE', '']

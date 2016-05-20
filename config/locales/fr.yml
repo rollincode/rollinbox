@@ -1,4 +1,40 @@
 fr:
+  admin:
+    actions:
+      nestable:
+        title: "Trier les %{model_label_plural}"
+        menu: "Trier"
+        breadcrumb: "Triage"
+        link: "Triage"
+        bulk_link: "Trier la selection de %{model_label_plural}"
+        done: "Trié"
+        success: "Succès"
+        error: "Erreur"
+        update: "Mettre à jour"
+        live_update: "Mise à jour auto."
+  models:
+    admin:
+      one: Admin
+      other: Admins
+    parameter:
+      one: Paramètre
+      other: Paramètres
+  attributes:
+    parameter:
+      value: Valeur
+    admin:
+      username: Identifiant
+      email: E-mail
+      encrypted_password: Mot de passe crypté
+      password: Mot de passe
+      reset_password_token: Token de réinitilisation de mot de passe
+      reset_password_sent_at: Demande de réinitialisation envoyé le
+      remember_created_at:
+      sign_in_count: Nombre de fois conneté
+      current_sign_in_at: Actuellement connecté le
+      last_sign_in_at: Dernière connexion le
+      current_sign_in_ip: Actuellement connecté via
+      last_sign_in_ip: Dernière connexion via
   activerecord:
     errors:
       messages:

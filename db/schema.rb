@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160225110329) do
+ActiveRecord::Schema.define(version: 20160520095019) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -40,6 +40,33 @@ ActiveRecord::Schema.define(version: 20160225110329) do
 
   add_index "contents", ["code"], name: "index_contents_on_code", unique: true
 
+  create_table "friendly_id_slugs", force: :cascade do |t|
+    t.string   "slug",                      null: false
+    t.integer  "sluggable_id",              null: false
+    t.string   "sluggable_type", limit: 50
+    t.string   "scope"
+    t.datetime "created_at"
+  end
+
+  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
+  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
+  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+
+  create_table "pages", force: :cascade do |t|
+    t.string   "title",      null: false
+    t.string   "code"
+    t.text     "content",    null: false
+    t.integer  "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "ancestry"
+    t.string   "slug"
+  end
+
+  add_index "pages", ["ancestry"], name: "index_pages_on_ancestry"
+  add_index "pages", ["code"], name: "index_pages_on_code"
+
   create_table "parameters", force: :cascade do |t|
     t.string   "code",       null: false
     t.string   "value",      null: false
@@ -48,6 +75,16 @@ ActiveRecord::Schema.define(version: 20160225110329) do
   end
 
   add_index "parameters", ["code"], name: "index_parameters_on_code", unique: true
+
+  create_table "seos", force: :cascade do |t|
+    t.string   "title",       null: false
+    t.text     "description", null: false
+    t.integer  "page_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "seos", ["page_id"], name: "index_seos_on_page_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

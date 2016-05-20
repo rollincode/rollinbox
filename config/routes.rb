@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   # HOME
   root to: 'home#index'
 
+  # PAGE
+  resources :pages
+
   # FROALA (WYSIWYG)
   post '/froala_upload' => 'froala#upload'
   post '/froala_manage' => 'froala#manage'

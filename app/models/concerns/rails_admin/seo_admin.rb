@@ -1,18 +1,20 @@
-module RailsAdmin::ParameterAdmin
+module RailsAdmin::SeoAdmin
   extend ActiveSupport::Concern
 
   included do
     rails_admin do
+      navigation_label 'SEO'
+      navigation_icon 'fa fa-google'
       parent Content
-      navigation_icon 'fa fa-cog'
 
       edit do
-        field :code do
+        field :title do
           required true
         end
-        field :value do
+        field :description do
           required true
         end
+        exclude_fields :page
       end
 
       show do
@@ -21,7 +23,6 @@ module RailsAdmin::ParameterAdmin
       list do
         exclude_fields :created_at, :updated_at
       end
-
     end
   end
 end
