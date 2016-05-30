@@ -1,0 +1,23 @@
+- @list_bg = ['info', 'success', 'danger', 'success', 'info', 'warning', 'danger', 'info', 'success']
+- if @abstract_models
+  .row
+    - @abstract_models.each_with_index do |abstract_model, index|
+      - if authorized? :index, abstract_model
+        - if index > @list_bg.length
+          - index = 0
+        - index_path = index_path(model_name: abstract_model.to_param)
+        - row_class = "box bg-#{ @list_bg[index].to_s } #{"link" if index_path} #{abstract_model.param_key}_links #{abstract_model.config.label_plural}"
+        .col-sm-4
+          .box{class: row_class, :"data-link" => index_path}
+            %i{class: "fa icon-bg fa-#{abstract_model.config.navigation_icon.present? ? abstract_model.config.navigation_icon : 'file' }"}
+            .text-center
+              %p= t('admin.rollincode.number')+' '+ capitalize_first_letter(abstract_model.config.label_plural)
+              %strong= @count[abstract_model.model.name].to_s
+              %p= link_to t('admin.rollincode.show')+' '+capitalize_first_letter(abstract_model.config.label_plural), index_path, class: 'btn btn-black pjax'
+:javascript
+  $('.breadcrumb, .nav-tabs').hide();
+- if @auditing_adapter && authorized?(:history_index)
+  #block-tables.block
+    .content
+      %h2= t("admin.actions.history_index.menu")
+      = render partial: 'rails_admin/main/dashboard_history'

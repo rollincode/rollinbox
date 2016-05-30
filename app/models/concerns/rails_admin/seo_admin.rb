@@ -4,7 +4,7 @@ module RailsAdmin::SeoAdmin
   included do
     rails_admin do
       navigation_label 'SEO'
-      navigation_icon 'fa fa-google'
+      navigation_icon 'fa fa-info-circle'
       parent Content
 
       edit do

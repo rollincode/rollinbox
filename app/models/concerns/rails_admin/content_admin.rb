@@ -5,6 +5,7 @@ module RailsAdmin::ContentAdmin
     rails_admin do
       navigation_label 'Content'
       navigation_icon 'fa fa-pencil-square-o'
+      label_plural 'Contents'
 
       edit do
         field :code do

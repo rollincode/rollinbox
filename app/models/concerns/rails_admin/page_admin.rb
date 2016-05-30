@@ -3,8 +3,9 @@ module RailsAdmin::PageAdmin
 
   included do
     rails_admin do
-      navigation_label 'Content'
+      navigation_label 'Page'
       navigation_icon 'fa fa-book'
+      label_plural 'Pages'
       nestable_tree({
         position_field: :position,
         max_depth: 4,

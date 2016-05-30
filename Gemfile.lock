@@ -6,6 +6,15 @@ GIT
       rails (~> 4.2.5)
 
 GIT
+  remote: https://github.com/rollincode/rails_admin_theme
+  revision: ed01b437d761395d062b4db490a86c1f8a1b3b55
+  specs:
+    rails_admin_rollincode (0.0.1)
+      icheck-rails (~> 1.0.2.1)
+      rails (>= 4.0, < 6)
+      wysiwyg-rails (>= 1.0.3)
+
+GIT
   remote: https://github.com/sferik/rails_admin.git
   revision: 355dc80f8a201ad5c09445c9b26fec51aa2180db
   branch: master
@@ -24,13 +33,6 @@ GIT
       remotipart (~> 1.0)
       safe_yaml (~> 1.0)
       sass-rails (>= 4.0, < 6)
-
-PATH
-  remote: /Users/nicolas/Sites/rails_admin_rollincode
-  specs:
-    rails_admin_rollincode (0.0.1)
-      icheck-rails (~> 1.0.2.1)
-      rails (~> 4.2.5)
 
 GEM
   remote: https://rubygems.org/

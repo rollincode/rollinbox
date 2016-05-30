@@ -1,0 +1,68 @@
+.box {
+  padding: 15px;
+  margin-bottom: 30px;
+  border: 1px solid #FFF;
+  position: relative;
+  min-height: 170px;
+  transition: all 0.3s ease;
+  color: rgba(255,255,255,0.85);
+  overflow: hidden;
+  &:hover, &:focus {
+    border-color: #CCC;
+    .icon-bg {
+      transform: scale(1.5) rotate(20deg);
+    }
+  }
+  p {
+    min-height: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    a.btn {
+      border-radius: 3px;
+      color: white !important;
+      display: inline-block;
+      margin-bottom: 0;
+      font-weight: normal;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.19);
+      border: 1px solid transparent;
+      white-space: nowrap;
+      padding: 6px 12px;
+      font-size: 14px;
+      line-height: 1.42857143;
+      border-radius: 4px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  }
+  strong {
+    font-size: 36px;
+    font-weight: 600;
+  }
+  .icon-bg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 100px;
+    color: #000;
+    opacity: 0.08;
+    filter: alpha(opacity=8);
+    transition: all 1s ease;
+  }
+  &.bg-info {
+    background-color: #38BDFF;
+  }
+  &.bg-success {
+    background-color: #90EF6A;
+  }
+  &.bg-warning {
+    background-color: #FFE247;
+  }
+  &.bg-danger {
+    background-color: #FD6969;
+  }
+}

@@ -4,7 +4,9 @@ module RailsAdmin::ParameterAdmin
   included do
     rails_admin do
       parent Content
+      navigation_label 'Parametre'
       navigation_icon 'fa fa-cog'
+      label_plural 'Parametres'
 
       edit do
         field :code do
