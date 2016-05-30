@@ -24,7 +24,7 @@ included do
 ```
 navigation_icon and label_plural are optional
 
-![DASHBOARD](http://imgur.com/g0SLBfS, "block system")
+![DASHBOARD](http://i.imgur.com/g0SLBfS.png, "block system")
 
 ### TODO ###
 
