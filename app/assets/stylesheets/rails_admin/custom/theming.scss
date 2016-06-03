@@ -1,3 +1,25 @@
+/*
+ *= require froala_editor.min.css
+ *= require froala_style.min.css
+ */
+
+@import 'froala_editor.min';
+@import 'froala_style.min';
+@import 'plugins/char_counter.min';
+@import 'plugins/code_view.min';
+@import 'plugins/colors.min';
+@import 'plugins/emoticons.min';
+@import 'plugins/file.min';
+@import 'plugins/fullscreen.min';
+@import 'plugins/image.min';
+@import 'plugins/image_manager.min';
+@import 'plugins/line_breaker.min';
+@import 'plugins/quick_insert.min';
+@import 'plugins/table.min';
+@import 'plugins/video.min';
+@import 'font-awesome';
+@import 'icheck/flat/all';
+
 .box {
   padding: 15px;
   margin-bottom: 30px;
