@@ -39,7 +39,7 @@ gem 'kaminari'
 gem 'friendly_id', '~> 5.1.0'
 gem 'ancestry'
 gem 'rails_admin_nestable', '~> 0.3.2'
-gem 'rails_admin_rollincode', '~ 1.0'
+gem 'rails_admin_rollincode', '~> 1.0'
 gem 'rails_admin', git: 'https://github.com/sferik/rails_admin.git', branch: 'master'
 
 group :development, :test do
