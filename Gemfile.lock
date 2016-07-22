@@ -1,20 +1,4 @@
 GIT
-  remote: https://github.com/rollincode/rails_admin_sortable
-  revision: 1ea0538cd5c42de8ab73bfaacb788925f41c9043
-  specs:
-    rails_admin_sortable (0.0.1)
-      rails (~> 4.2.5)
-
-GIT
-  remote: https://github.com/rollincode/rails_admin_theme
-  revision: ed01b437d761395d062b4db490a86c1f8a1b3b55
-  specs:
-    rails_admin_rollincode (0.0.1)
-      icheck-rails (~> 1.0.2.1)
-      rails (>= 4.0, < 6)
-      wysiwyg-rails (>= 1.0.3)
-
-GIT
   remote: https://github.com/sferik/rails_admin.git
   revision: 355dc80f8a201ad5c09445c9b26fec51aa2180db
   branch: master
@@ -226,6 +210,8 @@ GEM
       haml-rails
       rails_admin (>= 0.6.6)
       sass-rails
+    rails_admin_rollincode (1.0)
+      rails (>= 4.0, < 6)
     railties (4.2.5)
       actionpack (= 4.2.5)
       activesupport (= 4.2.5)
@@ -264,7 +250,7 @@ GEM
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
     slop (3.6.0)
-    spring (1.6.4)
+    spring (1.7.2)
     sprockets (3.5.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -325,8 +311,7 @@ DEPENDENCIES
   rails (= 4.2.5)
   rails_admin!
   rails_admin_nestable (~> 0.3.2)
-  rails_admin_rollincode!
-  rails_admin_sortable!
+  rails_admin_rollincode (~> 1.0)
   rake (~> 11.1)
   react-rails (~> 1.6.0)
   rename
