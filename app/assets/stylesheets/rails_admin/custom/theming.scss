@@ -19,18 +19,53 @@
 @import 'plugins/video.min';
 @import 'font-awesome';
 @import 'icheck/flat/all';
+@import 'colors';
+
+body {
+  background: rgb(59, 78, 89);
+}
+
+.page-header.dashboard {
+  border-color: $RAprimary;
+}
+
+a.navbar-brand {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+
+.breadcrumb {
+  background: $RAblue;
+  .false a {
+    color: darken($RAblue, 30%) !important;
+  }
+  .active, .active:before {
+    color: #FFF;
+  }
+}
+
+.table-striped {
+  border-top-color: $RAblue;
+}
+
+.content {
+  margin: 20px 0 15px 0;
+  padding: 8px;
+  &.dashboard {
+    background: rgb(59, 78, 89);
+  }
+}
 
 .box {
   padding: 15px;
   margin-bottom: 30px;
-  border: 1px solid #FFF;
+  border: 1px solid $RAprimary;
   position: relative;
   min-height: 170px;
   transition: all 0.3s ease;
   color: rgba(255,255,255,0.85);
   overflow: hidden;
   &:hover, &:focus {
-    border-color: #CCC;
+    border-color: #FFF;
     .icon-bg {
       transform: scale(1.5) rotate(20deg);
     }
@@ -76,15 +111,15 @@
     transition: all 1s ease;
   }
   &.bg-info {
-    background-color: #38BDFF;
+    background-color: $RAblue;
   }
   &.bg-success {
-    background-color: #90EF6A;
+    background-color: $RAgreen;
   }
   &.bg-warning {
-    background-color: #FFE247;
+    background-color: $RAyellow;
   }
   &.bg-danger {
-    background-color: #FD6969;
+    background-color: $RAred;
   }
 }

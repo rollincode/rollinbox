@@ -4,6 +4,7 @@ module RailsAdmin::AdminAdmin
   included do
     rails_admin do
       navigation_label 'Admins'
+      navigation_icon 'fa fa-user-secret'
       label_plural 'Admins'
       parent User
 

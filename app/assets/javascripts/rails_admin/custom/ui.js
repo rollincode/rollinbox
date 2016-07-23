@@ -26,7 +26,7 @@
 //= require plugins/video.min.js
 //= require languages/fr.js
 
-$(document).on('ready pjax:success', function() {
+$(document).on('ready pjax:success', function(e) {
   handleActiveBase();
   function handleActiveBase() {
     $('.sub-menu').each(function () {
@@ -36,6 +36,13 @@ $(document).on('ready pjax:success', function() {
         $(this).parent().slideDown();
       }
     });
+  }
+  // home dashboard dark theme
+  if(new RegExp('admin/'+'$').test(e.currentTarget.URL)){
+      $('.page-header, .content').addClass('dashboard');
+  }
+  else {
+      $('.page-header, .content').removeClass('dashboard');
   }
 });
 
