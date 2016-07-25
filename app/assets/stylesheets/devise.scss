@@ -15,7 +15,12 @@
  *= require_self
  */
 
-@import 'colors';
+ $primary: #1c2c41;
+ $secondary: #304158;
+ $light: #47566c;
+ $blue: #0C457D;
+ $grey: #706f6f;
+ $tertiary: #81C784;
 
 .devise {
   font-family: 'Raleway', sans-serif;
@@ -184,7 +189,7 @@
 
   input[type="submit"] {
     cursor: pointer;
-    background: $ternary;
+    background: $tertiary;
     color: #fff;
     border-radius: 3px;
     border: 0;
@@ -194,7 +199,7 @@
     margin-bottom: 45px;
     margin-top: 55px;
     &:hover {
-      background: darken($ternary, 5%);
+      background: darken($tertiary, 5%);
     }
   }
 
