@@ -19,7 +19,13 @@
 @import 'plugins/video.min';
 @import 'font-awesome';
 @import 'icheck/flat/all';
-@import 'colors';
+
+$RAprimary: #1c2c41;
+$RAgreen: #37BC9B;
+$RAblue: #3BAFDA;
+$RAred: #E9573F;
+$RAyellow: #F6BB42;
+
 
 body {
   background: rgb(59, 78, 89);
