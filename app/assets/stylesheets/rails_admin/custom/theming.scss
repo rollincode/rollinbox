@@ -62,7 +62,7 @@ a.navbar-brand {
   position: relative;
   min-height: 170px;
   transition: all 0.3s ease;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.7);
   overflow: hidden;
   &:hover, &:focus {
     border-color: #FFF;
@@ -76,7 +76,7 @@ a.navbar-brand {
     font-weight: 600;
     a.btn {
       border-radius: 3px;
-      color: white !important;
+      color: rgba(255,255,255,0.7) !important;
       display: inline-block;
       margin-bottom: 0;
       font-weight: normal;
