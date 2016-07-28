@@ -9,7 +9,7 @@
         - row_class = "box bg-#{ @list_bg[index].to_s } #{"link" if index_path} #{abstract_model.param_key}_links #{abstract_model.config.label_plural}"
         .col-sm-4
           .box{class: row_class, :"data-link" => index_path}
-            %i{class: "fa icon-bg fa-#{abstract_model.config.navigation_icon.present? ? abstract_model.config.navigation_icon : 'file' }"}
+            %i{class: "icon-bg #{abstract_model.config.navigation_icon.present? ? abstract_model.config.navigation_icon : 'file' }"}
             .text-center
               %p= t('admin.rollincode.number')+' '+ capitalize_first_letter(abstract_model.config.label_plural)
               %strong= @count[abstract_model.model.name].to_s
