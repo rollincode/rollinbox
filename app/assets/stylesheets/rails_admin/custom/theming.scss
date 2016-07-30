@@ -47,6 +47,12 @@ body {
 
 .table-striped {
   border-top-color: $RAblue;
+  .links ul li {
+    padding-right: 0;
+    a {
+      border-radius: 50%;
+    }
+  }
 }
 
 .content {
