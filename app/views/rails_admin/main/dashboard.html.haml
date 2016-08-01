@@ -3,7 +3,7 @@
   .row
     - @abstract_models.each_with_index do |abstract_model, index|
       - if authorized? :index, abstract_model
-        - if index > @list_bg.length
+        - if index == @list_bg.length
           - index = 0
         - index_path = index_path(model_name: abstract_model.to_param)
         - row_class = "box bg-#{ @list_bg[index].to_s } #{"link" if index_path} #{abstract_model.param_key}_links #{abstract_model.config.label_plural}"
