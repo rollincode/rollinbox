@@ -1,16 +1,4 @@
 fr:
-  date:
-    day_names: [Dimanche, Lundi, Mardi, Mercredi, Jeudi, Vendredi, Samedi]
-    abbr_day_names: [Dim, Lun, Mar, Mer, Jeu, Ven, Sam]
-
-    # Don't forget the nil at the beginning; there's no such thing as a 0th month
-    month_names: [~, Janvier, Février, Mars, Avril, Mai, Juin, Juillet, Août, Septembre, Octobre, Novembre, Décembre]
-    abbr_month_names: [~, Jan, Fev, Mar, Avr, Mai, Jun, Jul, Aou, Sep, Oct, Nov, Dec]
-    # Used in date_select and datetime_select.
-    order:
-      - :day
-      - :month
-      - :year
   simple_form:
     "yes": 'Oui'
     "no": 'Non'
