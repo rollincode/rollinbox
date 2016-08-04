@@ -1,7 +1,8 @@
 - @list_bg = ['info', 'success', 'danger', 'success', 'info', 'warning', 'danger', 'info', 'success']
 - if @abstract_models
   .row
-    - @abstract_models.each_with_index do |abstract_model, index|
+    - index = 0
+    - @abstract_models.each do |abstract_model|
       - if authorized? :index, abstract_model
         - if index == @list_bg.length
           - index = 0
@@ -14,6 +15,7 @@
               %p= t('admin.rollincode.number')+' '+ capitalize_first_letter(abstract_model.config.label_plural)
               %strong= @count[abstract_model.model.name].to_s
               %p= link_to t('admin.rollincode.show')+' '+capitalize_first_letter(abstract_model.config.label_plural), index_path, class: 'btn btn-black pjax'
+        - index += 1
 :javascript
   $('.breadcrumb, .nav-tabs').hide();
 - if @auditing_adapter && authorized?(:history_index)
