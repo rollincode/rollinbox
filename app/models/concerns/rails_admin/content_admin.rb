@@ -8,30 +8,34 @@ module RailsAdmin::ContentAdmin
       label_plural 'Contents'
 
       edit do
-        field :code do
-          required true
-        end
+        field :code
         field :content, :froala do
           config_options do
             {
               imageUploadURL: '/froala_upload',
               imageUploadParam: 'file',
               imageUploadParams: {
-                   type: 'image',
-                   model: 'content',
+                type: 'image',
+                model: 'content',
               },
               fileUploadURL: '/froala_upload',
               fileUploadParam: 'file',
               fileUploadParams: {
-                   type: 'file',
-                   model: 'content',
+                type: 'file',
+                model: 'content',
               },
               imageManagerLoadMethod: 'POST',
               imageManagerLoadURL: '/froala_manage',
               imageManagerLoadParams: {
-                   model: 'content',
-                   format: 'json'
-              }
+                model: 'content',
+                format: 'json',
+              },
+              imageManagerDeleteMethod: 'DELETE',
+              imageManagerDeleteURL: '/froala_delete',
+              imageManagerDeleteParams: {
+                model: 'content',
+                format: 'json',
+              },
             }
           end
         end

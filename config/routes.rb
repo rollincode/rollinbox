@@ -13,5 +13,5 @@ Rails.application.routes.draw do
   # FROALA (WYSIWYG)
   post '/froala_upload' => 'froala#upload'
   post '/froala_manage' => 'froala#manage'
-
+  delete '/froala_delete' => 'froala#delete'
 end

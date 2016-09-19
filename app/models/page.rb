@@ -28,6 +28,8 @@ class Page < ActiveRecord::Base
 
   accepts_nested_attributes_for :seo, allow_destroy: true
 
+  validates_presence_of :title
+
   def seo_id
     self.seo.try :id
   end

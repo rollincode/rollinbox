@@ -4,7 +4,20 @@ class FroalaController < ApplicationController
     uploader.store!(params[:file])
 
     respond_to do |format|
-      format.json { render :json => {status: 'OK', link: uploader.url} }
+      format.json { render json: {status: 'OK', link: uploader.url} }
+    end
+  end
+
+  def delete
+    image_name = params[:src].split('/').last
+
+    image_path = "uploads/froala/#{params[:model]}/image/#{image_name}"
+    path = "#{Rails.root}/public/#{image_path}"
+
+    FileUtils.rm(path)
+
+    respond_to do |format|
+      format.json { render json: {status: 'OK'} }
     end
   end
 
@@ -17,10 +30,10 @@ class FroalaController < ApplicationController
 
     if File.directory?(path)
       Dir.foreach(path) do |item|
-        next if item == '.' or item == '..'
+        next if item == '.' || item == '..'
         object = ObjectImage.new
-        object.url = real_image_path+item
-        object.thumb = real_image_path+item
+        object.url = real_image_path + item
+        object.thumb = real_image_path + item
         object.tag = params[:model]
 
         images << object
@@ -28,11 +41,12 @@ class FroalaController < ApplicationController
     end
 
     respond_to do |format|
-      format.json { render :json => images }
+      format.json { render json: images }
     end
   end
 
-  private
+private
+
   class ObjectImage
     attr_accessor :url, :thumb, :tag
   end

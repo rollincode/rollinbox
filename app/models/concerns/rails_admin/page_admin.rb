@@ -6,36 +6,38 @@ module RailsAdmin::PageAdmin
       navigation_label 'Page'
       navigation_icon 'fa fa-book'
       label_plural 'Pages'
-      nestable_tree({
-        position_field: :position,
-        max_depth: 4,
-      })
+      nestable_tree(position_field: :position,
+                    max_depth: 4)
 
       edit do
-        field :title do
-          required true
-        end
+        field :title
         field :content, :froala do
           config_options do
             {
               imageUploadURL: '/froala_upload',
               imageUploadParam: 'file',
               imageUploadParams: {
-                   type: 'image',
-                   model: 'content',
+                type: 'image',
+                model: 'page',
               },
               fileUploadURL: '/froala_upload',
               fileUploadParam: 'file',
               fileUploadParams: {
-                   type: 'file',
-                   model: 'content',
+                type: 'file',
+                model: 'page',
               },
               imageManagerLoadMethod: 'POST',
               imageManagerLoadURL: '/froala_manage',
               imageManagerLoadParams: {
-                   model: 'content',
-                   format: 'json'
-              }
+                model: 'page',
+                format: 'json',
+              },
+              imageManagerDeleteMethod: 'DELETE',
+              imageManagerDeleteURL: '/froala_delete',
+              imageManagerDeleteParams: {
+                model: 'page',
+                format: 'json',
+              },
             }
           end
         end

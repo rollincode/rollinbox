@@ -15,4 +15,6 @@
 
 class Content < ActiveRecord::Base
   include RailsAdmin::ContentAdmin
+
+  validates_presence_of :code
 end
