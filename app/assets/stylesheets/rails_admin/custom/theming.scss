@@ -31,6 +31,10 @@ body {
   background: rgb(59, 78, 89);
 }
 
+.page-header.dashboard {
+  border-color: $RAprimary;
+}
+
 .breadcrumb {
   background: $RAblue;
   .false a, .false:before {
@@ -54,6 +58,9 @@ body {
 .content {
   margin: 20px 0 15px 0;
   padding: 8px;
+  &.dashboard {
+    background: rgb(59, 78, 89);
+  }
 }
 
 a.delete {
