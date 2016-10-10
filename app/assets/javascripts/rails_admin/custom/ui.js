@@ -4,6 +4,7 @@
 //= require plugins/code_beautifier.min.js
 //= require plugins/code_view.min.js
 //= require plugins/colors.min.js
+//= require plugins/draggable.min.js
 //= require plugins/emoticons.min.js
 //= require plugins/entities.min.js
 //= require plugins/file.min.js
@@ -90,6 +91,4 @@ $(function () {
         $(this).toggleClass('active');
         $(this).next('.sub-menu-container').stop().slideDown();
     });
-
-    $('.fr-wrapper').css('minHeight', '250px');
 });

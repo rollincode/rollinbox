@@ -250,6 +250,11 @@ $(document).on 'rails_admin.dom_ready', (e, content) ->
           uploadEnabled = true;
 
         $(@).addClass('froala-wysiwyged')
+
+        config_options['heightMin'] = 200;
+        config_options['imageMove'] = true;
+        config_options['imageDefaultDisplay'] = 'inline';
+        
         $(@).froalaEditor(config_options)
         if uploadEnabled
           $(@).on 'froalaEditor.imageError', (e, editor, error) ->
