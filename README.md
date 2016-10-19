@@ -13,6 +13,12 @@ Easy sandbox to start projects, administration and site architecture provided
 - block system on dashboard
 - ... many others
 
+page link example
+
+```erb
+<%= page_path(@page.slug) %>
+```
+
 Block on dashboard
 integration example in model:
 ```ruby
