@@ -11,5 +11,4 @@ class PagesController < ApplicationController
       return redirect_to @page, status: :moved_permanently
     end
   end
-
 end
