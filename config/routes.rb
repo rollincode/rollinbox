@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   # PAGE
-  resources :pages
+  get '/pages/:id' => 'pages#show', as: 'page'
 
   # FROALA (WYSIWYG)
   post '/froala_upload' => 'froala#upload'
