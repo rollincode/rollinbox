@@ -40,7 +40,7 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'ancestry'
 gem 'rails_admin_nestable', '~> 0.3.2'
 gem 'rails_admin_rollincode', '~> 1.1'
-gem 'rails_admin', git: 'https://github.com/sferik/rails_admin.git', branch: 'master'
+gem 'rails_admin', '~> 1.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
