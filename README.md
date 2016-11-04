@@ -40,5 +40,5 @@ navigation_icon and label_plural are optional
 
 ### TODO ###
 
-- [] Capistrano initialization
+- [ ] Capistrano initialization
 - [X] Clean up
