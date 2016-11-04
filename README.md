@@ -1,22 +1,26 @@
 Rails Sandbox
 =============
 
-Easy sandbox to start projects, administration and site architecture provided
+Ready to use sandbox, back-end/front-end architecture provided.
 
-- rollincode rails admin theme
-- nested sortable
-- ancestry
-- image and attachment uploader
-- admin + user multi account
-- page handle & seo optimization
-- froala v2 + file and images manager
-- block system on dashboard
+- Rollincode rails admin theme (new modern bootstrap 3)
+- Nested sortable models
+- Image and attachment uploaders
+- Admin and User accounts configured
+- Page handle & seo optimization (friendly_id)
+- Froala v2 + file and images manager WYSIWYG
+- Block system on dashboard
 - ... many others
 
-page link example
+Page link example with slug
 
 ```erb
 <%= page_path(@page.slug) %>
+```
+
+Notifications
+```ruby
+redirect_to root_path, flash: {success: 'My message'}
 ```
 
 Block on dashboard
@@ -36,4 +40,5 @@ navigation_icon and label_plural are optional
 
 ### TODO ###
 
-- [ ] Clean up
+- [] Capistrano initialization
+- [X] Clean up
