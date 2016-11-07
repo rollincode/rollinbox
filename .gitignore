@@ -16,10 +16,12 @@
 !/log/.keep
 /tmp
 .idea/
+.vscode/
 .rbenv-gemsets
 .DS_Store
 public/system
 public/uploads
 public/assets/**
+public/sitemap.xml.gz
 .byebug_history
 /*.iml
