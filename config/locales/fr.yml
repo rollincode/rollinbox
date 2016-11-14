@@ -240,3 +240,10 @@ fr:
       last_word_connector: " et "
       two_words_connector: " et "
       words_connector: ", "
+  views:
+    pagination:
+      first: "&laquo; Premier"
+      last: Dernier &raquo;
+      next: Suivant &rsaquo;
+      previous: "&lsaquo; Précédent"
+      truncate: "&hellip;"      
