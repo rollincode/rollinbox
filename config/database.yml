@@ -24,8 +24,8 @@ production:
   <<: *default
   adapter: postgresql
   encoding: unicode
-  host: HOST
-  database: DATABASE
+  host: <%= ENV["DATABSE_HOST"] %>
+  database: <%= ENV["DATABSE_NAME"] %>
   pool: 5
-  username: USERNAME
-  password: PASSWORD
+  username: <%= ENV["DATABSE_USERNAME"] %>
+  password: <%= ENV["DATABSE_PASSWORD"] %>
