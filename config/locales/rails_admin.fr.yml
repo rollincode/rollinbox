@@ -18,7 +18,7 @@ fr:
       ends_with: Termine par
     loading: "Chargement..."
     home:
-      name: Home
+      name: Accueil
     pagination:
       previous: "&laquo; Préc."
       next: "Suiv. &raquo;"
