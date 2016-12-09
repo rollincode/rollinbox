@@ -15,12 +15,13 @@
  *= require_self
  */
 
- $primary: #1c2c41;
- $secondary: #304158;
- $light: #47566c;
- $blue: #0C457D;
- $grey: #706f6f;
- $tertiary: #81C784;
+ input:-webkit-autofill,
+ input:-webkit-autofill:active,
+ input:-webkit-autofill:focus,
+ input:-webkit-autofill:hover {
+   transition: background-color 5000s ease-in-out 0s;
+   -webkit-text-fill-color: #fff !important;
+ }
 
 .devise {
   font-family: 'Raleway', sans-serif;
@@ -36,29 +37,8 @@
 }
 
 .bckg-dark {
-  background: linear-gradient(-20deg, #09b7b9 30%, #1c51a4 100%);
-}
-
-.bckg-login {
-}
-
-.logo {
-  display: inline-block;
-  margin: 0 auto;
-  width: 130px;
-}
-
-.app-logo {
-  margin: 50px 0 25px;
-  width: 70%;
-}
-
-.bckg-dark-light {
-  background: $secondary;
-}
-
-.bckg-blue {
-  background: $blue;
+  background: url('https://source.unsplash.com/1920x1080/?landscape') center fixed;
+  background-size: cover;
 }
 
 .centered {
@@ -68,91 +48,17 @@
   transform: translate(-50%, -50%);
 }
 
-.login-form-user {
-  width: 25%;
-  color: #fff;
-  margin: 0 auto;
-  margin-bottom: 25px;
-
-  .content-width {
-    width: 90%;
-    padding-top: 1px;
-    padding-bottom: 1px;
-  }
-
-  .lost_id {
-    color: #fff;
-    margin-bottom: 15px;
-    display: block;
-    font-size: .9em;
-    width: 90%;
-  }
-
-  .form-actions {
-    display: inline-block;
-    width: 90%;
-    margin-bottom: 10px;
-    .col-sm-6 {
-      padding: 0;
-    }
-    input {
-      float: left;
-      .label {
-        float: left;
-      }
-    }
-    input[type="checkbox"] {
-      margin-top: 0;
-    }
-    .input-group {
-      float: left;
-    }
-    .checkbox {
-      margin: 0;
-      margin-top: 10px;
-      float: left;
-      label {
-        font-size: .8em;
-      }
-    }
-  }
-  form {
-    margin-top: 30px;
-  }
-  .input-group {
-    width: 90%;
-    margin-bottom: 15px;
-  }
-  input {
-    border: 0;
-  }
-  input[type="submit"] {
-    background: $grey;
-    border: 0;
-    border-radius: 0;
-    cursor: pointer;
-    float: right;
-    color: white;
-  }
-  h2 {
-    background: $grey;
-    display: block;
-    padding: 10px 15px;
-    text-align: left;
-    font-size: 1.3em;
-  }
-}
-
 .login-form {
+  background: #1c2c41;
   color: #fff;
   width: 30%;
 
   .links-form {
     a {
-      color: $light;
+      color: #47566c;
       text-decoration: none;
       &:hover {
-        color: $light;
+        color: #47566c;
       }
     }
   }
@@ -189,7 +95,7 @@
 
   input[type="submit"] {
     cursor: pointer;
-    background: $tertiary;
+    background: #304158;
     color: #fff;
     border-radius: 3px;
     border: 0;
@@ -199,23 +105,24 @@
     margin-bottom: 45px;
     margin-top: 55px;
     &:hover {
-      background: darken($tertiary, 5%);
+      background: darken(#304158, 5%);
     }
   }
 
   input[type="text"], input[type="email"], input[type="password"] {
     background-color: transparent;
     border: 0;
-    border-bottom: 1px solid $light;
+    border-bottom: 1px solid #47566c;
     color: #fff;
     margin-top: 15px;
     padding-bottom: 15px;
+    width: 100%;
   }
 
   .input-group-addon {
     background-color: transparent;
     border: 0;
-    border-bottom: 1px solid $light;
+    border-bottom: 1px solid #47566c;
     color: #fff;
     margin-top: 15px;
     padding-bottom: 15px;

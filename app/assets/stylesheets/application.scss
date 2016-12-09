@@ -6,50 +6,51 @@
  * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
  *
- *= required _colors
-
  *= require font-awesome
  *= require_tree .
  *= stub rails_admin/custom/theming.scss
  *= require_self
-*/
+ */
+
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 @import 'font-awesome';
-@import 'colors';
-@import 'mixins';
+
+$primary: #1abc9c;
+$secondary: #2c3e50;
 
 body {
-  height: 100vh;
-  color: #FFF;
-  background: linear-gradient(-20deg, #09b7b9 30%, #1c51a4 100%);
+  background: url('https://source.unsplash.com/1920x1080/?landscape') center fixed;
+  background-size: cover;
 }
 
-.navbar-brand {
-  padding-top: 12px;
-}
-
-.alert {
-  z-index: 999;
-  position: fixed;
-  border-radius: 0;
-  border: 0;
+.rollinbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: #fff;
-  width: 100%;
 }
 
-.alert-info {
-  background-color: #3498db;
+.rounded {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  border: 2px solid $primary;
+  background: $secondary;
+  color: #fff;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 70px;
 }
 
-.alert-success {
-  background-color: #2ecc71;
-}
-
-.alert-danger {
-  background-color: #e74c3c;
+.icon-centered {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }

@@ -2,7 +2,6 @@
  *= require froala_editor.min.css
  *= require froala_style.min.css
  */
-
 @import 'froala_editor.min';
 @import 'froala_style.min';
 @import 'plugins/char_counter.min';
@@ -19,37 +18,41 @@
 @import 'plugins/table.min';
 @import 'plugins/video.min';
 @import 'font-awesome';
-@import 'icheck/flat/all';
 
-$RAprimary: #1c2c41;
-$RAgreen: #37BC9B;
-$RAblue: #3BAFDA;
-$RAred: #E9573F;
-$RAyellow: #F6BB42;
-
+$ra-primary: #1c2c41;
+$ra-green: #37bc9b;
+$ra-blue: #3bafda;
+$ra-red: #e9573f;
+$ra-yellow: #f6bb42;
 
 body {
   background: rgb(59, 78, 89);
 }
 
 .page-header.dashboard {
-  border-color: $RAprimary;
+  border-color: $ra-primary;
 }
 
 .breadcrumb {
-  background: $RAblue;
-  .false a, .false:before {
-    color: darken($RAblue, 30%) !important;
+  background: $ra-blue;
+
+  .false a,
+  .false:before {
+    color: darken($ra-blue, 30%) !important;
   }
-  .active, .active:before {
-    color: #FFF;
+
+  .active,
+  .active:before {
+    color: #fff;
   }
 }
 
 .table-striped {
-  border-top-color: $RAblue;
+  border-top-color: $ra-blue;
+
   .links ul li {
     padding-right: 0;
+
     a {
       border-radius: 50%;
     }
@@ -57,82 +60,93 @@ body {
 }
 
 .content {
-  margin: 20px 0 15px 0;
+  margin: 20px 0 15px;
   padding: 8px;
+
   &.dashboard {
     background: rgb(59, 78, 89);
   }
 }
 
 a.delete {
-  color: #FFF;
+  color: #fff;
 }
 
 .box {
   padding: 15px;
   margin-bottom: 30px;
-  border: 1px solid $RAprimary;
+  border: 1px solid $ra-primary;
   position: relative;
   min-height: 170px;
-  transition: all 0.3s ease;
-  color: rgba(255,255,255,0.7);
+  transition: all .3s ease;
+  color: rgba(255, 255, 255, .7);
   overflow: hidden;
-  &:hover, &:focus {
-    border-color: #FFF;
+
+  &:focus,
+  &:hover {
+    border-color: #fff;
+
     .icon-bg {
       transform: scale(1.5) rotate(20deg);
     }
   }
+
   p {
     min-height: 30px;
     font-size: 15px;
     font-weight: 600;
+
     a.btn {
-      border-radius: 3px;
-      color: rgba(255,255,255,0.7) !important;
+      border-radius: 4px;
+      color: rgba(255, 255, 255, 0.7) !important;
       display: inline-block;
       margin-bottom: 0;
       font-weight: normal;
       text-align: center;
       vertical-align: middle;
       cursor: pointer;
-      background-color: rgba(0, 0, 0, 0.19);
+      background-color: rgba(0, 0, 0, .19);
       border: 1px solid transparent;
       white-space: nowrap;
       padding: 6px 12px;
       font-size: 14px;
       line-height: 1.42857143;
-      border-radius: 4px;
       -webkit-user-select: none;
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
     }
   }
+
   strong {
     font-size: 36px;
     font-weight: 600;
   }
+
   .icon-bg {
     position: absolute;
     right: 0;
     bottom: 0;
     font-size: 100px;
     color: #000;
-    opacity: 0.08;
+    opacity: .08;
     filter: alpha(opacity=8);
     transition: all 1s ease;
   }
+
   &.bg-info {
-    background-color: $RAblue;
+    background-color: $ra-blue;
   }
+
   &.bg-success {
-    background-color: $RAgreen;
+    background-color: $ra-green;
   }
+
   &.bg-warning {
-    background-color: $RAyellow;
+    background-color: $ra-yellow;
   }
+
   &.bg-danger {
-    background-color: $RAred;
+    background-color: $ra-red;
   }
 }

@@ -4,5 +4,4 @@ class FroalaUploader < CarrierWave::Uploader::Base
   def store_dir
     "uploads/froala/#{model}/#{mounted_as}"
   end
-
 end

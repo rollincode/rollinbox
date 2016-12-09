@@ -1,0 +1,24 @@
+.alert {
+  z-index: 999;
+  position: fixed;
+  border-radius: 0;
+  border: 0;
+  color: #fff;
+  width: 100%;
+}
+
+.alert-info {
+  background-color: #3498db;
+}
+
+.alert-warning {
+  background-color: #f1c40f;
+}
+
+.alert-success {
+  background-color: #2ecc71;
+}
+
+.alert-danger {
+  background-color: #e74c3c;
+}

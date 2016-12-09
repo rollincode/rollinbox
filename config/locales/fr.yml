@@ -23,6 +23,9 @@ fr:
       parameter:
         one: Paramètre
         other: Paramètres
+      content:
+        one: Contenu
+        other: Contenu
     attributes:
       parameter:
         value: Valeur
@@ -246,4 +249,4 @@ fr:
       last: Dernier &raquo;
       next: Suivant &rsaquo;
       previous: "&lsaquo; Précédent"
-      truncate: "&hellip;"      
+      truncate: "&hellip;"

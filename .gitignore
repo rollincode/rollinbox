@@ -13,15 +13,9 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*
+/tmp/*
 !/log/.keep
-/tmp
-.idea/
-.vscode/
-.rbenv-gemsets
-.DS_Store
-public/system
-public/uploads
-public/assets/**
-public/sitemap.xml.gz
+!/tmp/.keep
+
+# Ignore Byebug command history file.
 .byebug_history
-/*.iml

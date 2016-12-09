@@ -30,11 +30,11 @@ RailsAdmin.config do |config|
     delete
 
     ## With an audit adapter, you can add:
-    #history_index
-    #history_show
+    # history_index
+    # history_show
 
     nestable
   end
 
-  config.main_app_name = ['APP-TITLE', '']
+  config.main_app_name = ['Rollinbox', '']
 end

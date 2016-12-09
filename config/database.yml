@@ -22,10 +22,4 @@ test:
 
 production:
   <<: *default
-  adapter: postgresql
-  encoding: unicode
-  host: <%= ENV["DATABASE_HOST"] %>
-  database: <%= ENV["DATABASE_NAME"] %>
-  pool: 5
-  username: <%= ENV["DATABASE_USERNAME"] %>
-  password: <%= ENV["DATABASE_PASSWORD"] %>
+  database: db/production.sqlite3
