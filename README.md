@@ -41,5 +41,6 @@ navigation_icon and label_plural are optional
 ### TODO ###
 
 - [ ] Rails 5 migration
+- [ ] Capistrano setup
 - [X] Capistrano initialization
 - [X] Clean up
