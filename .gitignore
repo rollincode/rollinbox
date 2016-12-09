@@ -17,5 +17,14 @@
 !/log/.keep
 !/tmp/.keep
 
+.idea/
+.vscode/
+.rbenv-gemsets
+.DS_Store
+public/system
+public/uploads
+public/assets/**
+public/sitemap.xml.gz
+
 # Ignore Byebug command history file.
 .byebug_history
