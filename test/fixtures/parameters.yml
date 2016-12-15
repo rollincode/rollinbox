@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: parameters
+#
+#  id         :integer          not null, primary key
+#  code       :string           not null
+#  value      :string           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 # This model initially had no columns defined. If you add columns to the
