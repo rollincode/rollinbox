@@ -46,6 +46,8 @@ gem 'kaminari'
 gem 'friendly_id'
 gem 'ancestry'
 gem 'whenever'
+gem 'kaminari'
+gem 'breadcrumbs_on_rails'
 
 # ADMIN
 gem 'rails_admin_nestable', '~> 0.3.2'
