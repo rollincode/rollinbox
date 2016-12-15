@@ -40,7 +40,7 @@ navigation_icon and label_plural are optional
 
 ### TODO ###
 
-- [ ] Rails 5 migration
-- [ ] Capistrano setup
+- [X] Rails 5 migration
+- [ ] Capistrano instructions
 - [X] Capistrano initialization
 - [X] Clean up
