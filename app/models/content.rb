@@ -8,13 +8,10 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-# Indexes
-#
-#  index_contents_on_code  (code) UNIQUE
-#
 
-class Content < ActiveRecord::Base
+class Content < ApplicationRecord
   include RailsAdmin::ContentAdmin
 
-  validates_presence_of :code
+  validates_presence_of :code, :content
+  validates_uniqueness_of :code
 end

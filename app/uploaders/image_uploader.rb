@@ -7,20 +7,25 @@ class ImageUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  #version :example, if: :is_example? do
-    #process :resize_to_fill => [200, 150]
-  #end
+  version :post_thumb, if: :post? do
+    process resize_to_fill: [50, 50]
+  end
+
+  version :post, if: :post? do
+    process resize_to_fill: [600, 450]
+  end
 
   def extension_white_list
     %w(jpg jpeg gif png)
   end
-  
+
   def content_type_whitelist
     /image\//
   end
 
-  protected
-  #def is_example?(picture)
-  #  model.kind_of?(ExampleModel)
-  #end
+protected
+
+  def post?(_picture)
+    model.is_a?(Post)
+  end
 end

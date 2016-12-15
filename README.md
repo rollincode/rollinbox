@@ -1,4 +1,4 @@
-Rails Sandbox
+Rails 5 Sandbox
 =============
 
 Ready to use sandbox, back-end/front-end architecture provided.
@@ -7,15 +7,15 @@ Ready to use sandbox, back-end/front-end architecture provided.
 - Nested sortable models
 - Image and attachment uploaders
 - Admin and User accounts configured
-- Page handle & seo optimization (friendly_id)
+- Seo optimization (friendly_id)
 - Froala v2 + file and images manager WYSIWYG
 - Block system on dashboard
 - ... many others
 
-Page link example with slug
+Model link example with slug see friendly_id
 
 ```erb
-<%= page_path(@page.slug) %>
+<%= model_path(@model.slug) %>
 ```
 
 Notifications
@@ -40,5 +40,7 @@ navigation_icon and label_plural are optional
 
 ### TODO ###
 
-- [ ] Capistrano initialization
+- [ ] Rails 5 migration
+- [ ] Capistrano setup
+- [X] Capistrano initialization
 - [X] Clean up

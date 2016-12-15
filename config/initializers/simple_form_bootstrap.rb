@@ -146,7 +146,7 @@ SimpleForm.setup do |config|
     date: :multi_select,
     time: :multi_select
   }
-  
+
   1.upto(12) do |col|
     config.wrappers "inline_field#{col}".to_sym, tag: 'div', class: "col-sm-#{col}", error_class: 'has-error' do |ic|
       ic.use :html5

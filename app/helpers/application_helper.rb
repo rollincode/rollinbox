@@ -1,4 +1,12 @@
 module ApplicationHelper
+  def title(title)
+    content_for(:title) { title }
+  end
+
+  def meta_description(meta_description)
+    content_for(:meta_description) { meta_description }
+  end
+
   def bootstrap_class_for(flash_type)
     case flash_type
     when 'success'

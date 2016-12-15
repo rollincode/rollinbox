@@ -13,8 +13,10 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*
+/tmp/*
 !/log/.keep
-/tmp
+!/tmp/.keep
+
 .idea/
 .vscode/
 .rbenv-gemsets
@@ -23,5 +25,6 @@ public/system
 public/uploads
 public/assets/**
 public/sitemap.xml.gz
+
+# Ignore Byebug command history file.
 .byebug_history
-/*.iml
