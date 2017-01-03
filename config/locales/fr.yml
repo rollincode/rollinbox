@@ -150,6 +150,7 @@ fr:
   errors:
     format: "%{attribute} %{message}"
     messages:
+      extension_white_list_error: "Vous n'êtes pas autorisé à envoyer des fichiers %{extension}, seuls sont autorisés: %{allowed_types}"
       accepted: doit être accepté(e)
       blank: doit être rempli(e)
       present: doit être vide
