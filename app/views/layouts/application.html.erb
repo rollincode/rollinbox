@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>
-    <% if yield(:title).present? %>
-      <%= yield(:title) %>
-    <% else %>
-      <%= @seo_title.value %>
-    <% end %>
-    </title>
-    <% if yield(:meta_description).present? %>
-      <meta name="description" content="<%= yield(:meta_description) %>" />
-    <% else %>
-      <meta name="description" content="<%= @seo_description.value %>" />
-    <% end %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= yield(:title).present? ? yield(:title) : @seo_title.value %></title>
+    <meta name="description" content="<%= yield(:meta_description).present? ? yield(:meta_description) : @seo_description.value %>">
+    <%= favicon_link_tag 'favicon.png', type: 'image/png' %>
+    <meta property="og:url"           content="<%= request.original_url %>" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="<%= yield(:og_title).present? ? yield(:og_title) : @seo_title.value %>" />
+    <meta property="og:description"   content="<%= yield(:og_description).present? ? yield(:og_description) : @seo_description.value %>" />
+    <meta property="og:image"         content="<%= yield(:og_image).present? ? yield(:og_image) : asset_url('logo-og.jpg') %>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+    <meta name="turbolinks-cache-control" content="no-cache">
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <%= javascript_include_tag "ie" %>
+      <%= javascript_include_tag 'ie' %>
     <![endif]-->
   </head>
-
   <body>
     <%= render partial: 'shared/flash_messages', flash: flash %>
-
     <%= yield %>
   </body>
 </html>
