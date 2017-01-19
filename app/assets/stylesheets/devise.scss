@@ -15,14 +15,6 @@
  *= require_self
  */
 
- input:-webkit-autofill,
- input:-webkit-autofill:active,
- input:-webkit-autofill:focus,
- input:-webkit-autofill:hover {
-   transition: background-color 5000s ease-in-out 0s;
-   -webkit-text-fill-color: #fff !important;
- }
-
 .devise {
   font-family: 'Raleway', sans-serif;
   height: 100vh;
@@ -33,6 +25,14 @@
   .container-fluid-devise {
     height: 100vh;
     overflow: auto;
+  }
+ 
+  input:-webkit-autofill,
+  input:-webkit-autofill:active,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:hover {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #fff !important;
   }
 }
 
