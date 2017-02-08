@@ -40,7 +40,7 @@ fr:
       down: "Descendre"
       navigation: "Navigation"
       navigation_static_label: "Liens"
-      log_out: "Log out"
+      log_out: "Déconnexion"
       ago: ""
     flash:
       successful: "%{name} a été %{action} avec succès"
