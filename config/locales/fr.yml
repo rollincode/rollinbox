@@ -26,9 +26,20 @@ fr:
       content:
         one: Contenu
         other: Contenu
+    defaults: &defaults
+      title: Titre
+      value: Valeur
+      content: Contenu
+      created_at: Créé(e) le
+      updated_at: Mis à jours le
+      featured: Mis en avant
     attributes:
       parameter:
-        value: Valeur
+        <<: *defaults
+      content:
+        <<: *defaults
+      page:
+        <<: *defaults
       admin:
         username: Identifiant
         email: E-mail
