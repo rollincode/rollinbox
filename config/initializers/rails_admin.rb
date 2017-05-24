@@ -21,13 +21,17 @@ RailsAdmin.config do |config|
   config.actions do
     dashboard # mandatory
     index # mandatory
-    new
+    new do
+      except ['SeoTool']
+    end
 
     export
     bulk_delete
     show
     edit
-    delete
+    delete do
+      except ['SeoTool']
+    end
 
     ## With an audit adapter, you can add:
     # history_index

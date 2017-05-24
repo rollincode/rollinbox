@@ -52,6 +52,7 @@ gem 'ancestry'
 gem 'whenever'
 gem 'kaminari'
 gem 'breadcrumbs_on_rails'
+gem 'simple_form'
 
 # ADMIN
 gem 'rails_admin_nestable', '~> 0.3.2'
