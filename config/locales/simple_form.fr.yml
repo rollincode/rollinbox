@@ -12,8 +12,8 @@ fr:
       default_message: "Merci de corriger les champs ci-dessous:"
     labels:
       defaults:
-        first_name: "Nom"
-        last_name: "Prénom"
+        first_name: "Prénom"
+        last_name: "Nom"
         address: "Adresse"
         facebook_identifier: Identifiant Facebook
         city: Ville
