@@ -22,7 +22,7 @@ RailsAdmin.config do |config|
     dashboard # mandatory
     index # mandatory
     new do
-      except ['SeoTool']
+      except [SeoTool]
     end
 
     export
@@ -30,7 +30,7 @@ RailsAdmin.config do |config|
     show
     edit
     delete do
-      except ['SeoTool']
+      except [SeoTool]
     end
 
     ## With an audit adapter, you can add:
