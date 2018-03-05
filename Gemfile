@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.0'
+gem 'rails', '~> 5.1.5'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -39,7 +39,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'autoprefixer-rails'
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'sitemap_generator'
-gem 'webpacker', github: 'rails/webpacker'
+#gem 'webpacker', github: 'rails/webpacker'
 
 # Backend / Utils
 gem 'wysiwyg-rails'
